@@ -1,21 +1,3 @@
-// TODO
-// 1. ごみ捨て当番の登録と選択
-// [x] ゴミ捨て当番の選択
-// [x] ゴミ捨て当番の保存
-// [x] ゴミ捨て当番の登録
-// [x] ゴミ捨て当番の確認
-// 2. ゴミ捨て情報APIと連携
-// [x] ゴミ捨て情報APIに適した地域の登録->APIの登録料が少なくて使えなかった
-// [x] ゴミ捨て情報APIからゴミ捨て情報を取得->実施しない。集めていける仕組みを作ったほうがよさそう
-// 3. 優先度低のやつら
-// [x] ゴミ捨て地域の変更->地域登録しないでリリースする
-// [x] ゴミ捨て当番の削除
-// [ ] ゴミ捨て情報を作成/更新できる仕組みを考えて仕込んでおく
-// [ ] インテントのconfirmationどうやってやる？
-// 4. 審査申請
-// [ ] アイコンをつくる
-// [ ]
-
 "use strict";
 const Alexa = require('alexa-sdk');
 
@@ -46,13 +28,12 @@ var handlers = {
     var message = 'ゴミ捨て当番にようこそ。';
     if (!userNames) {
       message += 'まずは当番を登録します。ひとりずつ追加しますので、たとえば、太郎を追加して、と言ってください。';
+      this.emit(':ask', message);
     } else {
-      message += '今日のゴミ捨て当番を知りたい場合は、ゴミ捨て当番は誰と聞いてください。' +
-                 '登録されている当番を知りたい場合は、登録情報を教えてと聞いてください。';
+      message += '今日のゴミ捨て当番を知りたい場合は、ゴミ捨て当番で当番を教えて、と聞いてください。' +
+                 '登録されている当番を知りたい場合は、ゴミ捨て当番で登録情報を教えて、と聞いてください。';
+      this.emit(':tell', message);
     }
-
-    // 表示
-    this.emit(':ask', message);
     console.log('HelpIntent Message:', message);
   },
   'RegisterIntent': function () {
@@ -62,16 +43,13 @@ var handlers = {
 
     // 担当の追加/登録
     var userName = this.event.request.intent.slots.FirstName.value;
-    if (userName && userName != '') {
-      userNames.push(userName); // リストに追加
-      userNames = userNames.filter(onlyUnique); // 重複除去
-      this.attributes['userNames'] = userNames; // 保存/更新
-      message = userName + 'さんを追加しました。'
-    } else {
-      message = 'すいませんがうまく追加できませんでした。もう一度お試しください。';
-    }
+    userNames.push(userName); // リストに追加
+    userNames = userNames.filter(onlyUnique); // 重複除去
+    this.attributes['userNames'] = userNames; // 保存/更新
+    message = userName + 'さんを追加しました。'
+
     // メッセージ
-    this.emit(':ask', message);
+    this.emit(':tell', message);
     console.log('RegisterIntent Message:', message);
 
     // 保存
@@ -84,20 +62,17 @@ var handlers = {
 
     // 担当の追加/登録
     var userName = this.event.request.intent.slots.FirstName.value;
-    if (userName && userName != '' && userNames.indexOf(userName) != -1) {
+    if (userNames.indexOf(userName) != -1) {
       userNames.splice(userNames.indexOf(userName), 1); // リストから削除
       this.attributes['userNames'] = userNames; // 保存/更新
+      this.emit(':saveState', true); // 保存
       message = userName + 'さんを削除しました。';
+      this.emit(':tell', message);
     } else {
-      message = 'すいませんがうまく削除できませんでした。もう一度お試しください。';
+      message = 'すいませんが登録されているリストにない名前でした。もう一度お試しください。';
+      this.emit(':ask', message);
     }
-
-    // メッセージ
-    this.emit(':ask', message);
     console.log('DeleteIntent Message:', message);
-
-    // 保存
-    this.emit(':saveState', true);
   },
   'SettingIntent': function () {
     var userNames = this.attributes['userNames'];
@@ -115,9 +90,9 @@ var handlers = {
       message += '、' + userNames[i] + 'さん';
     }
     message += 'です。'
-    message += '登録されている当番を追加したい場合は、たとえば、太郎を登録して、と言ってください。';
-    message += '登録されている当番を削除したい場合は、たとえば、太郎を削除して、と言ってください。';
-    this.emit(':ask', message);
+    message += '登録されている当番を追加したい場合は、たとえば、ゴミ捨て当番で太郎を登録して、と言ってください。';
+    message += '登録されている当番を削除したい場合は、たとえば、ゴミ捨て当番で太郎を削除して、と言ってください。';
+    this.emit(':tell', message);
     console.log('SettingIntent Message:', message);
   },
   'ChoiceIntent': function () {
@@ -130,19 +105,21 @@ var handlers = {
       return;
     }
 
-    // 選択
-    var dayUser = this.attributes['dayUser'];
-    var today = getToday();
-    console.log('ChoiceIntent Read:', dayUser);
+    // 選択処理
+    var userNamesByDate = this.attributes['userNamesByDate'] || {};
+    var dutyDate = this.event.request.intent.slots.dutyDate.value || getToday();
+    dutyDate = formatDate(new Date(dutyDate));
+    console.log('ChoiceIntent Read userNamesByDate:', userNamesByDate);
+    console.log('ChoiceIntent Read dutyDate:', dutyDate);
 
     // DBにデータがないか、あっても日付が今日でないデータの場合選択する
-    if (!dayUser || dayUser['date'] != today || userNames.indexOf(dayUser['userName'])) {
+    if (!userNamesByDate[dutyDate] || userNames.indexOf(userNamesByDate[dutyDate])) {
       var userName = choice(userNames);
-      dayUser = { date: today, userName: userName };
-      this.attributes['dayUser'] = dayUser; // 保存/更新
-      console.log('ChoiceIntent Choice:', dayUser);
+      userNamesByDate[dutyDate] = userName;
+      this.attributes['userNamesByDate'] = userNamesByDate; // 保存/更新
+      console.log('ChoiceIntent Choice:', userNamesByDate[dutyDate]);
     }
-    var message = '今日のゴミ捨て当番は' + dayUser['userName'] + 'さんです。';
+    var message = messageFromDate(dutyDate) + 'のゴミ捨て当番は' + userNamesByDate[dutyDate] + 'さんです。';
 
     // メッセージ
     this.emit(':tell', message);
@@ -163,15 +140,50 @@ var choice = function (userNames) {
   return userNames[Math.floor(Math.random() * userNames.length)];
 };
 
-// 日付を取得 (YYYY/MM/DD)
+// 今日の日付を取得(JST)
 var getToday = function () {
-  var today = new Date();
-  var year = today.getFullYear();
-  var month = today.getMonth() + 1;
-  var day = today.getDate();
-  return year + '/' + month + '/' + day;
+  var date = new Date();
+  date.setTime(date.getTime() + 32400000); // 日本時間に変更 1000 * 60 * 60 * 9(hour)
+  return formatDate(date);
 };
+
+// 日付をYYYY-MM-DDでフォーマット、0パディング
+var formatDate = function (date) {
+  var y = date.getFullYear();
+  var m = date.getMonth() + 1;
+  var d = date.getDate();
+  var y0 = ('0000' + y).slice(-4);
+  var m0 = ('00' + m).slice(-2);
+  var d0 = ('00' + d).slice(-2);
+  return y0 + '-' + m0 + '-' + d0;
+}
 
 var onlyUnique = function (value, index, self) {
   return self.indexOf(value) === index;
+}
+
+var messageFromDate = function (dutyDate) {
+  var startDate = Date.parse(getToday());
+  var endDate = Date.parse(dutyDate);
+  var diff = dateDiff(startDate, endDate);
+  switch (diff) {
+    case -2:
+      return '一昨日';
+    case -1:
+      return '昨日';
+    case 0:
+      return '今日';
+    case 1:
+      return '明日';
+    case 2:
+      return '明後日';
+    case 3:
+      return '明々後日';
+    default:
+      return endDate;
+  }
+}
+
+var dateDiff = function (startDate, endDate) {
+  return (endDate - startDate) / (1000 * 60 * 60 * 24); // hour x min x sec x mili
 }
