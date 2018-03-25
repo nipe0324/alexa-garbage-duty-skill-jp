@@ -1,0 +1,617 @@
+lgcode,area_ja,area_en
+13109,上大崎1丁目,
+13109,上大崎2丁目,
+13109,上大崎3丁目,
+13109,上大崎4丁目,
+13109,中延1丁目,
+13109,中延2丁目,
+13109,中延3丁目,
+13109,中延4丁目,
+13109,中延5丁目,
+13109,中延6丁目,
+13109,二葉1丁目,
+13109,二葉2丁目,
+13109,二葉3丁目,
+13109,二葉4丁目,
+13109,八潮1丁目,
+13109,八潮2丁目,
+13109,八潮3丁目,
+13109,八潮4丁目,
+13109,八潮5丁目1～39号,
+13109,八潮5丁目40～69号棟・わかくさ荘,
+13109,勝島1丁目,
+13109,勝島2丁目,
+13109,勝島3丁目,
+13109,北品川1丁目,
+13109,北品川2丁目,
+13109,北品川3丁目,
+13109,北品川4丁目,
+13109,北品川5丁目,
+13109,北品川6丁目,
+13109,南品川1丁目,
+13109,南品川2丁目,
+13109,南品川3丁目,
+13109,南品川4丁目,
+13109,南品川5丁目,
+13109,南品川6丁目,
+13109,南大井1丁目,
+13109,南大井2丁目,
+13109,南大井3丁目,
+13109,南大井4丁目,
+13109,南大井5丁目,
+13109,南大井6丁目18番,
+13109,南大井6丁目18番以外,
+13109,大井1丁目,
+13109,大井2丁目,
+13109,大井3丁目,
+13109,大井4丁目,
+13109,大井5丁目,
+13109,大井6丁目,
+13109,大井7丁目,
+13109,大崎2丁目,
+13109,大崎3丁目,
+13109,大崎4丁目,
+13109,大崎5丁目,
+13109,大崎１丁目,
+13109,小山1丁目,
+13109,小山2丁目,
+13109,小山3丁目,
+13109,小山4丁目,
+13109,小山5丁目,
+13109,小山6丁目,
+13109,小山7丁目,
+13109,小山台1丁目,
+13109,小山台2丁目,
+13109,平塚1丁目,
+13109,平塚2丁目4番4号,
+13109,平塚2丁目4番4号以外,
+13109,平塚3丁目,
+13109,広町1丁目,
+13109,広町2丁目,
+13109,戸越1丁目,
+13109,戸越2丁目,
+13109,戸越3丁目,
+13109,戸越4丁目,
+13109,戸越5丁目,
+13109,戸越6丁目,
+13109,旗の台1丁目,
+13109,旗の台2丁目,
+13109,旗の台3丁目,
+13109,旗の台4丁目,
+13109,旗の台5丁目,
+13109,旗の台6丁目,
+13109,東中延1丁目,
+13109,東中延2丁目,
+13109,東五反田1丁目,
+13109,東五反田2丁目,
+13109,東五反田3丁目,
+13109,東五反田4丁目,
+13109,東五反田5丁目,
+13109,東品川1丁目,
+13109,東品川2丁目,
+13109,東品川3丁目,
+13109,東品川4丁目,
+13109,東品川5丁目,
+13109,東大井1丁目,
+13109,東大井2丁目,
+13109,東大井3丁目,
+13109,東大井4丁目,
+13109,東大井5丁目1～10番,
+13109,東大井5丁目1～10番以外,
+13109,東大井6丁目17番,
+13109,東大井6丁目1～16番,
+13109,荏原1丁目,
+13109,荏原2丁目,
+13109,荏原3丁目,
+13109,荏原4丁目,
+13109,荏原5丁目,
+13109,荏原6丁目,
+13109,荏原7丁目,
+13109,西中延1丁目,
+13109,西中延2丁目,
+13109,西中延3丁目,
+13109,西五反田1丁目,
+13109,西五反田2丁目,
+13109,西五反田3丁目,
+13109,西五反田4丁目,
+13109,西五反田5丁目,
+13109,西五反田6丁目,
+13109,西五反田7丁目,
+13109,西五反田8丁目,
+13109,西品川1丁目（品川エリア）,
+13109,西品川1丁目（荏原エリア）,
+13109,西品川2丁目,
+13109,西品川3丁目,
+13109,西大井1丁目（品川エリア）,
+13109,西大井1丁目（荏原エリア）,
+13109,西大井2丁目,
+13109,西大井3丁目,
+13109,西大井4丁目,
+13109,西大井5丁目,
+13109,西大井6丁目（品川エリア）,
+13109,西大井6丁目（荏原エリア）,
+13109,豊町1丁目,
+13109,豊町2丁目,
+13109,豊町3丁目,
+13109,豊町4丁目,
+13109,豊町5丁目,
+13109,豊町6丁目,
+18207,相生,aioi
+18207,青葉町,aobacho
+18207,あおい町,aoicho
+18207,有定町1丁目,arisadacho 1-chome
+18207,有定町2丁目,arisadacho 2-chome
+18207,有定町3丁目,arisadacho 3-chome
+18207,旭町1丁目,asahimachi 1-chome
+18207,旭町2丁目,asahimachi 2-chome
+18207,旭町3丁目,asahimachi 3-chome
+18207,旭町4丁目,asahimachi 4-chome
+18207,朝霞町内会,asakachonaikai
+18207,あすなろ町内会,asunarochonaikai
+18207,莇生田町,azoudacho
+18207,あずま町内会,azumachonaikai
+18207,別司町,besshicho
+18207,別所町,besshocho
+18207,長泉寺町1丁目,chousenjicho 1-chome
+18207,長泉寺町2丁目,chousenjicho 2-chome
+18207,大正寺町,daishoujicho
+18207,冬島町,fujimacho
+18207,深江町,fukaecho
+18207,舟枝町,funaedacho
+18207,舟津町1丁目,funatsucho 1-chome
+18207,舟津町2丁目,funatsucho 2-chome
+18207,舟津町3丁目,funatsucho 3-chome
+18207,舟津町4丁目,funatsucho 4-chome
+18207,舟津町5丁目,funatsucho 5-chome
+18207,下司町,geshicho
+18207,五郎丸町,goroumarucho
+18207,橋立町,hashitatecho
+18207,平和台団地,heiwadaidanchi
+18207,東鯖江1丁目,higashisabae 1-chome
+18207,東鯖江2丁目,higashisabae 2-chome
+18207,東鯖江3丁目,higashisabae 3-chome
+18207,東鯖江4丁目,higashisabae 4-chome
+18207,東清水町,higashishimizucho
+18207,東鳥羽,higashitoba
+18207,東米岡1丁目,higashiyoneoka 1-chome
+18207,東米岡2丁目,higashiyoneoka 2-chome
+18207,日野町内会,hinochounaikai
+18207,日の出町,hinodecho
+18207,平井町,hiraicho
+18207,本町１丁目,honmachi 1-chome
+18207,本町2丁目,honmachi 2-chome
+18207,本町3丁目,honmachi 3-chome
+18207,本町4丁目,honmachi 4-chome
+18207,入町,iricho
+18207,石田上町,ishidakamicho
+18207,石田中町,ishidanakacho
+18207,石田下町,ishidashimocho
+18207,石生谷町,ishoudanicho
+18207,磯部町,isobecho
+18207,寺中町,jichuucho
+18207,持明寺町,jimyoujicho
+18207,上河端町,kamikoubatacho
+18207,上河内町,kamikouchicho
+18207,神中町1丁目,kaminakacho 1-chome
+18207,神中町2丁目,kaminakacho 2-chome
+18207,神中町3丁目,kaminakacho 3-chome
+18207,上野田町,kaminodacho
+18207,上鯖江1丁目,kamisabae 1-chome
+18207,上鯖江2丁目,kamisabae 2-chome
+18207,上杉本,kamisugimoto
+18207,上戸口町,kamitonokuchicho
+18207,上氏家町,kamiuzuecho
+18207,金谷町,kanadanicho
+18207,片山町,katayamacho
+18207,河和田町,kawadacho
+18207,川去町,kawasaricho
+18207,川島町,kawashimacho
+18207,北中町,kitanakacho
+18207,北野町1丁目,kitanocho 1-chome
+18207,北野町2丁目,kitanocho 2-chome
+18207,小黒町1丁目,koguromachi 1-chome
+18207,小黒町2丁目,koguromachi 2-chome
+18207,小黒町3丁目,koguromachi 3-chome
+18207,小泉町,koizumicho
+18207,熊田町,kumadacho
+18207,丸山町,maruyamacho
+18207,丸山町3丁目,maruyamacho 3-chome
+18207,松成町,matsunaricho
+18207,みどり町内会,midorichounaikai
+18207,宮前1丁目,miyamae 1-chome
+18207,宮前2丁目,miyamae 2-chome
+18207,御幸町1丁目,miyukicho 1-chome
+18207,御幸町2丁目,miyukicho 2-chome
+18207,御幸町3丁目,miyukicho 3-chome
+18207,御幸町4丁目,miyukicho 4-chome
+18207,水落町1丁目,mizuochicho 1-chome
+18207,水落町2丁目,mizuochicho 2-chome
+18207,水落町3丁目,mizuochicho 3-chome
+18207,水落町4丁目,mizuochicho 4-chome
+18207,中野町 出口,nakanocho deguchi
+18207,中野町 花出,nakanocho hanaide
+18207,中野町 原,nakanocho hara
+18207,中野町 樋口,nakanocho higuchi
+18207,中野町 木引,nakanocho kibiki
+18207,中野町 まち,nakanocho machi
+18207,中野町 曲木,nakanocho magariki
+18207,中野町 松成,nakanocho matsunari
+18207,中杉本,nakasugimoto
+18207,中戸口町,nakatonokuchicho
+18207,南井町,naoicho
+18207,二丁掛町,nichougakecho
+18207,西番町,nishibancho
+18207,西袋町,nishibukurocho
+18207,西大井町,nishiooicho
+18207,西杉本,nishisugimoto
+18207,西山町,nishiyamacho
+18207,尾花町,obanacho
+18207,落井町,ochiicho
+18207,大倉町,ookuracho
+18207,大野町,oonocho
+18207,乙坂今北町,ossakakonbokucho
+18207,定次町,sadatsugicho
+18207,定次団地,sadatsugidanchi
+18207,幸町1丁目,saiwaicho 1-chome
+18207,幸町2丁目,saiwaicho 2-chome
+18207,桜町1丁目,sakuramachi 1-chome
+18207,桜町2丁目,sakuramachi 2-chome
+18207,桜町3丁目,sakuramachi 3-chome
+18207,三六町1丁目,sannrokucho 1-chome
+18207,三六町2丁目,sannrokucho 2-chome
+18207,沢町,sawacho
+18207,青武台団地,seibudaidanchi
+18207,西和町内会,seiwachounaikai
+18207,四方谷町,shihoudanicho
+18207,下河端町,shimokoubatacho
+18207,下野田町,shimonodacho
+18207,下新庄町,shimoshinjoucho
+18207,下杉本,shimosugimoto
+18207,下氏家町,shimouzuecho
+18207,新出,shinde
+18207,新町,shinmachi
+18207,神明町1丁目,shinmeicho 1-chome
+18207,神明町2丁目,shinmeicho 2-chome
+18207,神明町3丁目,shinmeicho 3-chome
+18207,神明町4丁目,shinmeicho 4-chome
+18207,神明町5丁目,shinmeicho 5-chome
+18207,新横江1丁目,shinyokoe 1-chome
+18207,新横江2丁目,shinyokoe 2-chome
+18207,住吉町1丁目,sumiyoshicho 1-chome
+18207,住吉町2丁目,sumiyoshicho 2-chome
+18207,住吉町3丁目,sumiyoshicho 3-chome
+18207,糺町,tadasucho
+18207,田所町,tadokorocho
+18207,田村町,tamuracho
+18207,鳥羽1丁目,toba 1-chome
+18207,鳥羽2丁目,toba 2-chome
+18207,鳥羽3丁目,toba 3-chome
+18207,戸口町,tonokuchicho
+18207,鳥井町,toriicho
+18207,当田町,toudecho
+18207,椿坂,tsubae
+18207,つつじヶ丘町,tsutsujigaokacho
+18207,漆原町,urushiharacho
+18207,和田町,wadacho
+18207,若葉町内会,wakabachounaikai
+18207,屋形町,yakatacho
+18207,柳町1丁目,yanagimachi 1-chome
+18207,柳町2丁目,yanagimachi 2-chome
+18207,柳町3丁目,yanagimachi 3-chome
+18207,柳町4丁目,yanagimachi 4-chome
+18207,柳町団地,yanagimachidanchi
+18207,横江町1丁目,yokoecho 1-chome
+18207,横江町2丁目,yokoecho 2-chome
+18207,横越町,yokogoshicho
+18207,米岡町,yoneokacho
+18207,吉田町,yoshidacho
+18207,吉江町,yoshiecho
+18207,吉江住宅団地,yoshiejuutakudanchi
+18207,吉江中,yoshienaka
+18207,吉江山手団地,yoshieyamatedanchi
+18207,吉谷町,yoshitanicho
+18207,吉谷町青葉台,yoshitanichoaobadai
+18207,相生,aioi
+18207,あおい町,aoicho
+18207,青葉町,aobacho
+18207,朝霞町内会,asakachonaikai
+18207,旭町1丁目,asahimachi 1-chome
+18207,旭町2丁目,asahimachi 2-chome
+18207,旭町3丁目,asahimachi 3-chome
+18207,旭町4丁目,asahimachi 4-chome
+18207,あすなろ町内会,asunarochonaikai
+18207,あずま町内会,azumachonaikai
+18207,莇生田町,azoudacho
+18207,有定町1丁目,arisadacho 1-chome
+18207,有定町2丁目,arisadacho 2-chome
+18207,有定町3丁目,arisadacho 3-chome
+18207,石田上町,ishidakamicho
+18207,石田下町,ishidashimocho
+18207,石田中町,ishidanakacho
+18207,石生谷町,ishoudanicho
+18207,磯部町,isobecho
+18207,入町,iricho
+18207,漆原町,urushiharacho
+18207,大倉町,ookuracho
+18207,大野町,oonocho
+18207,落井町,ochiicho
+18207,乙坂今北町,ossakakonbokucho
+18207,尾花町,obanacho
+18207,片山町,katayamacho
+18207,金谷町,kanadanicho
+18207,上氏家町,kamiuzuecho
+18207,上河内町,kamikouchicho
+18207,上河端町,kamikoubatacho
+18207,上鯖江1丁目,kamisabae 1-chome
+18207,上鯖江2丁目,kamisabae 2-chome
+18207,上杉本,kamisugimoto
+18207,上戸口町,kamitonokuchicho
+18207,神中町1丁目,kaminakacho 1-chome
+18207,神中町2丁目,kaminakacho 2-chome
+18207,神中町3丁目,kaminakacho 3-chome
+18207,上野田町,kaminodacho
+18207,川去町,kawasaricho
+18207,川島町,kawashimacho
+18207,河和田町,kawadacho
+18207,北中町,kitanakacho
+18207,北野町1丁目,kitanocho 1-chome
+18207,北野町2丁目,kitanocho 2-chome
+18207,熊田町,kumadacho
+18207,下司町,geshicho
+18207,小泉町,koizumicho
+18207,小黒町1丁目,koguromachi 1-chome
+18207,小黒町2丁目,koguromachi 2-chome
+18207,小黒町3丁目,koguromachi 3-chome
+18207,五郎丸町,goroumarucho
+18207,幸町1丁目,saiwaicho 1-chome
+18207,幸町2丁目,saiwaicho 2-chome
+18207,桜町1丁目,sakuramachi 1-chome
+18207,桜町2丁目,sakuramachi 2-chome
+18207,桜町3丁目,sakuramachi 3-chome
+18207,定次団地,sadatsugidanchi
+18207,定次町,sadatsugicho
+18207,三六町1丁目,sannrokucho 1-chome
+18207,三六町2丁目,sannrokucho 2-chome
+18207,沢町,sawacho
+18207,四方谷町,shihoudanicho
+18207,下氏家町,shimouzuecho
+18207,下河端町,shimokoubatacho
+18207,下新庄町,shimoshinjoucho
+18207,下杉本,shimosugimoto
+18207,下野田町,shimonodacho
+18207,新出,shinde
+18207,新町,shinmachi
+18207,神明町1丁目,shinmeicho 1-chome
+18207,神明町2丁目,shinmeicho 2-chome
+18207,神明町3丁目,shinmeicho 3-chome
+18207,神明町4丁目,shinmeicho 4-chome
+18207,神明町5丁目,shinmeicho 5-chome
+18207,新横江1丁目,shinyokoe 1-chome
+18207,新横江2丁目,shinyokoe 2-chome
+18207,寺中町,jichuucho
+18207,持明寺町,jimyoujicho
+18207,住吉町1丁目,sumiyoshicho 1-chome
+18207,住吉町2丁目,sumiyoshicho 2-chome
+18207,住吉町3丁目,sumiyoshicho 3-chome
+18207,青武台団地,seibudaidanchi
+18207,西和町内会,seiwachounaikai
+18207,糺町,tadasucho
+18207,田所町,tadokorocho
+18207,田村町,tamuracho
+18207,大正寺町,daishoujicho
+18207,長泉寺町1丁目,chousenjicho 1-chome
+18207,長泉寺町2丁目,chousenjicho 2-chome
+18207,つつじヶ丘町,tsutsujigaokacho
+18207,椿坂,tsubae
+18207,当田町,toudecho
+18207,戸口町,tonokuchicho
+18207,鳥羽1丁目,toba 1-chome
+18207,鳥羽2丁目,toba 2-chome
+18207,鳥羽3丁目,toba 3-chome
+18207,鳥井町,toriicho
+18207,南井町,naoicho
+18207,中杉本,nakasugimoto
+18207,中戸口町,nakatonokuchicho
+18207,中野町 木引,nakanocho kibiki
+18207,中野町 出口,nakanocho deguchi
+18207,中野町 花出,nakanocho hanaide
+18207,中野町 原,nakanocho hara
+18207,中野町 樋口,nakanocho higuchi
+18207,中野町 曲木,nakanocho magariki
+18207,中野町 まち,nakanocho machi
+18207,中野町 松成,nakanocho matsunari
+18207,西大井町,nishiooicho
+18207,西杉本,nishisugimoto
+18207,西番町,nishibancho
+18207,西袋町,nishibukurocho
+18207,西山町,nishiyamacho
+18207,二丁掛町,nichougakecho
+18207,橋立町,hashitatecho
+18207,東鯖江1丁目,higashisabae 1-chome
+18207,東鯖江2丁目,higashisabae 2-chome
+18207,東鯖江3丁目,higashisabae 3-chome
+18207,東鯖江4丁目,higashisabae 4-chome
+18207,東清水町,higashishimizucho
+18207,東鳥羽,higashitoba
+18207,東米岡1丁目,higashiyoneoka 1-chome
+18207,東米岡2丁目,higashiyoneoka 2-chome
+18207,日野町内会,hinochounaikai
+18207,日の出町,hinodecho
+18207,平井町,hiraicho
+18207,深江町,fukaecho
+18207,冬島町,fujimacho
+18207,舟枝町,funaedacho
+18207,舟津町1丁目,funatsucho 1-chome
+18207,舟津町2丁目,funatsucho 2-chome
+18207,舟津町3丁目,funatsucho 3-chome
+18207,舟津町4丁目,funatsucho 4-chome
+18207,舟津町5丁目,funatsucho 5-chome
+18207,平和台団地,heiwadaidanchi
+18207,別司町,besshicho
+18207,別所町,besshocho
+18207,本町１丁目,honmachi 1-chome
+18207,本町2丁目,honmachi 2-chome
+18207,本町3丁目,honmachi 3-chome
+18207,本町4丁目,honmachi 4-chome
+18207,松成町,matsunaricho
+18207,丸山町,maruyamacho
+18207,丸山町3丁目,maruyamacho 3-chome
+18207,水落町1丁目,mizuochicho 1-chome
+18207,水落町2丁目,mizuochicho 2-chome
+18207,水落町3丁目,mizuochicho 3-chome
+18207,水落町4丁目,mizuochicho 4-chome
+18207,みどり町内会,midorichounaikai
+18207,宮前1丁目,miyamae 1-chome
+18207,宮前2丁目,miyamae 2-chome
+18207,御幸町1丁目,miyukicho 1-chome
+18207,御幸町2丁目,miyukicho 2-chome
+18207,御幸町3丁目,miyukicho 3-chome
+18207,御幸町4丁目,miyukicho 4-chome
+18207,屋形町,yakatacho
+18207,柳町1丁目,yanagimachi 1-chome
+18207,柳町2丁目,yanagimachi 2-chome
+18207,柳町3丁目,yanagimachi 3-chome
+18207,柳町4丁目,yanagimachi 4-chome
+18207,柳町団地,yanagimachidanchi
+18207,横江町1丁目,yokoecho 1-chome
+18207,横江町2丁目,yokoecho 2-chome
+18207,横越町,yokogoshicho
+18207,吉江住宅団地,yoshiejuutakudanchi
+18207,吉江町,yoshiecho
+18207,吉江中,yoshienaka
+18207,吉江山手団地,yoshieyamatedanchi
+18207,吉谷町,yoshitanicho
+18207,吉谷町青葉台,yoshitanichoaobadai
+18207,吉田町,yoshidacho
+18207,米岡町,yoneokacho
+18207,若葉町内会,wakabachounaikai
+18207,和田町,wadacho
+22206,青木,aoki
+22206,青葉台,aobadai
+22206,旭ヶ丘,asahigaoka
+22206,愛宕,atago
+22206,阿部野,abeno
+22206,新谷,araya
+22206,泉町,izumicho
+22206,市山新田,ichinoyamashinden
+22206,一番町,ichibancho
+22206,壱町田1・2丁目,ichouda1・2chome
+22206,遺伝研,idenken
+22206,ウィステリア三島青木,wisuteriamishimaaoki
+22206,梅名,umena
+22206,エンゼルハイム芙蓉台,enzeruhaimuhuyoudai
+22206,大宮町1・2・3丁目,oomiyacho1・2・3chome
+22206,押切,oshikiri
+22206,加茂,kamo
+22206,加茂川町1・2区,kamogawacho1・2く
+22206,加屋町,kayamachi
+22206,かわせみ,kawasemi
+22206,かわせみタウン壱町田,kawasemitaunichouda
+22206,川原ケ谷,kawaharagaya
+22206,北沢,kitazawa
+22206,北田町（仙台）,kitatamachi(sendai)
+22206,清住町,kiyozumicho
+22206,県営壱町田やまがみ団地,kenneiicchoudayamagamidanchi
+22206,幸原町,koubaracho
+22206,小沢,kozawa
+22206,寿町,kotobukicho
+22206,小山,koyama
+22206,小山台,koyamadai
+22206,小山中島,koyamanakajima
+22206,合同宿舎文教住宅,goudoushukushabunkyoujuutaku
+22206,幸町,saiwaicho
+22206,栄町,sakaecho
+22206,桜ケ丘,sakuragaoka
+22206,笹原,sasahara
+22206,佐野,sano
+22206,沢地,sawaji
+22206,三恵台,sankeidai
+22206,サンステージ壱町田,sansute-jiichouda
+22206,市営加茂住宅,sieikamojutaku
+22206,市営谷田住宅,sieiyatajutaku
+22206,市営柳郷地住宅,sieiyanagigouchijutaku
+22206,芝本町,sibahoncho
+22206,シャリエ三島壱町田,shariemishimaichouda
+22206,シャリエ三島松が丘,shariemishimamatsugaoka
+22206,シャルマンコーポ,sharumanｃo-po
+22206,末広町,suehirocho
+22206,千枚原,senmaibara
+22206,大社町,taishacho
+22206,竹倉,takekura
+22206,玉川,tamagawa
+22206,玉沢,tamazawa
+22206,多呂,taro
+22206,台崎,daisaki
+22206,大場,daiba
+22206,中央町・中央町2区,chuuoucho・chuuoucho2ku
+22206,塚の台,tsukanodai
+22206,塚原台,tsukaharadai
+22206,塚原・（下原）,tsukahara・（simohara）
+22206,鶴喰,tsuruhami
+22206,徳倉第1・2・3・4・5・6,tokuradai1・2・3・4・5・6
+22206,富田町,tomitamachi
+22206,中,naka
+22206,中島,nakajima
+22206,中田町（北・南）,nakatamachi(kita・minami)
+22206,中（東藤代町）,naka(higashifujisirocho)
+22206,長伏,nagabuse
+22206,夏梅木,natsumegi
+22206,並木,namiki
+22206,西旭ヶ丘,nishiasahigaoka
+22206,錦が丘,nishikigaoka
+22206,西富士見,nishifujimi
+22206,西本町,nishihoncho
+22206,西若町,nishiwakacho
+22206,萩,hagi
+22206,箱根坂,hakonezaka
+22206,箱根別荘,hakonebesou
+22206,八反畑,hatabata
+22206,初音,hatsune
+22206,初音台,hatsunedai
+22206,ヴァンヴェール遺伝坂,vanｖe-ruidenzaka
+22206,光ケ丘1・3丁目,hikarigaoka1・3chome
+22206,光ケ丘県営住宅・市営住宅,hikarigaokakeneijutaku・sieijutaku
+22206,東壱町田,higashiichoda
+22206,東大場,higashidaiba
+22206,東町,higashicho
+22206,東富士見,higashifujimi
+22206,東本町1・2丁目,higashihoncho1・2chome
+22206,日の出町,hinodecho
+22206,平田,hirata
+22206,広小路町,hirokoujicho
+22206,藤代町,fujisirocho
+22206,富士ビレッジ,fujibireji
+22206,富士見台,fujimidai
+22206,芙蓉台,huyoudai
+22206,文教町西,bunkyochonishi
+22206,文教町東岩崎,bunkyochohigashiiwasaki
+22206,文教町1丁目,bunkyocho1chome
+22206,文教町2丁目,bunkyocho2chome
+22206,本町（大中島・小中島）,honcho(oonakajima・konakajima)
+22206,松が丘,matsugaoka
+22206,松本,matsumoto
+22206,御門,mikado
+22206,三島パサディナ,mishimapasadina
+22206,御園,misono
+22206,三ツ谷,mitsuya
+22206,緑ケ丘,midorigaoka
+22206,緑町,midoricho
+22206,南田町,minamitamachi
+22206,南町,minamicho
+22206,南二日町,minamihutsukamachi
+22206,南本町（御殿・新御殿・高台）,minamihoncho(goten・singoten・takadai)
+22206,見晴台,miharashidai
+22206,三好町,miyoshicho
+22206,元山中,motoyamanaka
+22206,モナーク三島,mona-kumishima
+22206,安久,yasuhisa
+22206,谷田,yata
+22206,谷田城の内,yatajounouchi
+22206,八坪,yatsubo
+22206,柳郷地,yanagigouchi
+22206,山田,yamada
+22206,山田住宅,yamadajutaku
+22206,山中,yamanaka
+22206,山中農場,yamanakanoujou
+22206,雪沢,yukizawa
+22206,若松町,wakamatsucho
