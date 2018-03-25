@@ -9,8 +9,9 @@
 // [x] ゴミ捨て情報APIからゴミ捨て情報を取得->実施しない。集めていける仕組みを作ったほうがよさそう
 // 3. 優先度低のやつら
 // [x] ゴミ捨て地域の変更->地域登録しないでリリースする
-// [ ] ゴミ捨て当番の削除
+// [x] ゴミ捨て当番の削除
 // [ ] ゴミ捨て情報を作成/更新できる仕組みを考えて仕込んでおく
+// [ ] インテントのconfirmationどうやってやる？
 // 4. 審査申請
 // [ ] アイコンをつくる
 // [ ]
@@ -38,16 +39,16 @@ var handlers = {
     this.emit('AMAZON.HelpIntent');
   },
   'AMAZON.HelpIntent': function () {
-    var userList = this.attributes['userList'];
-    console.log('HelpIntent Read:', userList);
+    var userNames = this.attributes['userNames'];
+    console.log('HelpIntent Read:', userNames);
 
     // 初回振り分け
     var message = 'ゴミ捨て当番にようこそ。';
-    if (!userList) {
-      message += 'まずは当番を登録します。ひとりずつ追加しますので、たとえば、ゴミ捨て当番に太郎を登録して、と言ってください。';
+    if (!userNames) {
+      message += 'まずは当番を登録します。ひとりずつ追加しますので、たとえば、太郎を追加して、と言ってください。';
     } else {
       message += '今日のゴミ捨て当番を知りたい場合は、ゴミ捨て当番は誰と聞いてください。' +
-                 '登録されている当番や地域を知りたい場合は、ゴミ捨て当番の登録情報を教えてと聞いてください。';
+                 '登録されている当番を知りたい場合は、登録情報を教えてと聞いてください。';
     }
 
     // 表示
@@ -56,49 +57,75 @@ var handlers = {
   },
   'RegisterIntent': function () {
     var message,
-        userList = this.attributes['userList'] || [];
-    console.log('RegisterIntent Read:', userList);
+        userNames = this.attributes['userNames'] || [];
+    console.log('RegisterIntent Read:', userNames);
 
     // 担当の追加/登録
     var userName = this.event.request.intent.slots.FirstName.value;
     if (userName && userName != '') {
-      userList.push(userName); // リストに追加
-      userList = userList.filter(onlyUnique); // 重複除去
-      this.attributes['userList'] = userList; // 保存/更新
-      message = userName + 'さんを登録しました。';
+      userNames.push(userName); // リストに追加
+      userNames = userNames.filter(onlyUnique); // 重複除去
+      this.attributes['userNames'] = userNames; // 保存/更新
+      message = userName + 'さんを追加しました。'
     } else {
-      message = 'すいませんがうまく登録できませんでした。';
+      message = 'すいませんがうまく追加できませんでした。もう一度お試しください。';
     }
     // メッセージ
-    message += '引き続き登録する場合は、ゴミ捨て当番に太郎を登録して、と言ってください。'
     this.emit(':ask', message);
     console.log('RegisterIntent Message:', message);
+
+    // 保存
+    this.emit(':saveState', true);
+  },
+  'RemoveIntent': function () {
+    var message,
+        userNames = this.attributes['userNames'] || [];
+    console.log('DeleteIntent Read:', userNames);
+
+    // 担当の追加/登録
+    var userName = this.event.request.intent.slots.FirstName.value;
+    if (userName && userName != '' && userNames.indexOf(userName) != -1) {
+      userNames.splice(userNames.indexOf(userName), 1); // リストから削除
+      this.attributes['userNames'] = userNames; // 保存/更新
+      message = userName + 'さんを削除しました。';
+    } else {
+      message = 'すいませんがうまく削除できませんでした。もう一度お試しください。';
+    }
+
+    // メッセージ
+    this.emit(':ask', message);
+    console.log('DeleteIntent Message:', message);
+
+    // 保存
+    this.emit(':saveState', true);
   },
   'SettingIntent': function () {
-    var userList = this.attributes['userList'];
-    console.log('SettingIntent Read:', userList);
+    var userNames = this.attributes['userNames'];
+    console.log('SettingIntent Read:', userNames);
 
     // 初期設置がない場合はヘルプへ
-    if (!userList) {
+    if (!userNames) {
       this.emit('AMAZON.HelpIntent');
       return;
     }
 
     // メッセージ
-    var message = '登録されている当番は' + userList.length + '名で';
-    for (var i = 0; i < userList.length; i += 1) {
-      message += '、' + userList[i] + 'さん';
+    var message = '登録されている当番は' + userNames.length + '名で';
+    for (var i = 0; i < userNames.length; i += 1) {
+      message += '、' + userNames[i] + 'さん';
     }
     message += 'です。'
-    this.emit(':tell', message);
+    message += '登録されている当番を追加したい場合は、たとえば、太郎を登録して、と言ってください。';
+    message += '登録されている当番を削除したい場合は、たとえば、太郎を削除して、と言ってください。';
+    this.emit(':ask', message);
     console.log('SettingIntent Message:', message);
   },
   'ChoiceIntent': function () {
-    var userList = this.attributes['userList'];
-    console.log('ChoiceIntent Read:', userList);
+    var userNames = this.attributes['userNames'];
+    console.log('ChoiceIntent Read:', userNames);
 
     // 初期設置がない場合はヘルプへ
-    if (!userList) {
+    if (!userNames) {
       this.emit('AMAZON.HelpIntent');
       return;
     }
@@ -109,13 +136,13 @@ var handlers = {
     console.log('ChoiceIntent Read:', dayUser);
 
     // DBにデータがないか、あっても日付が今日でないデータの場合選択する
-    if (!dayUser || dayUser['date'] != today) {
-      var user = choice(userList);
-      dayUser = { date: today, user: user };
+    if (!dayUser || dayUser['date'] != today || userNames.indexOf(dayUser['userName'])) {
+      var userName = choice(userNames);
+      dayUser = { date: today, userName: userName };
       this.attributes['dayUser'] = dayUser; // 保存/更新
       console.log('ChoiceIntent Choice:', dayUser);
     }
-    var message = '今日のゴミ捨て当番は' + dayUser['user'] + 'さんです。';
+    var message = '今日のゴミ捨て当番は' + dayUser['userName'] + 'さんです。';
 
     // メッセージ
     this.emit(':tell', message);
@@ -132,8 +159,8 @@ var handlers = {
 // 関数
 ////////////////////////////////////
 // 選択関数
-var choice = function (userList) {
-  return userList[Math.floor(Math.random() * userList.length)];
+var choice = function (userNames) {
+  return userNames[Math.floor(Math.random() * userNames.length)];
 };
 
 // 日付を取得 (YYYY/MM/DD)
