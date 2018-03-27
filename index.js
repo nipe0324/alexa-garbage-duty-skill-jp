@@ -20,6 +20,12 @@ var handlers = {
   'LaunchRequest': function () {
     this.emit('AMAZON.HelpIntent');
   },
+  'AMAZON.CancelIntent': function () {
+    this.emit('AMAZON.StopIntent');
+  },
+  'AMAZON.StopIntent': function () {
+    this.emit(':tell', 'ゴミ捨て当番を終了します。');
+  },
   'AMAZON.HelpIntent': function () {
     var userNames = this.attributes['userNames'];
     console.log('HelpIntent Read:', userNames);
@@ -28,12 +34,11 @@ var handlers = {
     var message = 'ゴミ捨て当番にようこそ。';
     if (!userNames) {
       message += 'まずは当番を登録します。ひとりずつ追加しますので、たとえば、太郎を追加して、と言ってください。';
-      this.emit(':ask', message);
     } else {
       message += '今日のゴミ捨て当番を知りたい場合は、ゴミ捨て当番で当番を教えて、と聞いてください。' +
                  '登録されている当番を知りたい場合は、ゴミ捨て当番で登録情報を教えて、と聞いてください。';
-      this.emit(':tell', message);
     }
+    this.emit(':ask', message);
     console.log('HelpIntent Message:', message);
   },
   'RegisterIntent': function () {
@@ -168,7 +173,7 @@ var messageFromDate = function (dutyDate) {
   var diff = dateDiff(startDate, endDate);
   switch (diff) {
     case -2:
-      return '一昨日';
+      return 'おととい';
     case -1:
       return '昨日';
     case 0:
@@ -176,11 +181,11 @@ var messageFromDate = function (dutyDate) {
     case 1:
       return '明日';
     case 2:
-      return '明後日';
+      return 'あさって';
     case 3:
-      return '明々後日';
+      return 'しあさって';
     default:
-      return endDate;
+      return dutyDate;
   }
 }
 
