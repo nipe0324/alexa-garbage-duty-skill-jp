@@ -42,6 +42,10 @@ var handlers = {
     console.log('HelpIntent Message:', message);
   },
   'RegisterIntent': function () {
+    // 対話モデル
+    var filledSlots = delegateSlotCollection.call(this);
+
+    // 変数取得
     var message,
         userNames = this.attributes['userNames'] || [];
     console.log('RegisterIntent Read:', userNames);
@@ -191,4 +195,28 @@ var messageFromDate = function (dutyDate) {
 
 var dateDiff = function (startDate, endDate) {
   return (endDate - startDate) / (1000 * 60 * 60 * 24); // hour x min x sec x mili
+}
+
+// dialog
+function delegateSlotCollection () {
+  console.log("in delegateSlotCollection");
+  console.log("current dialogState: "+this.event.request.dialogState);
+  if (this.event.request.dialogState === "STARTED") {
+    console.log("in Beginning");
+    var updatedIntent=this.event.request.intent;
+    //optionally pre-fill slots: update the intent object with slot values for which
+    //you have defaults, then return Dialog.Delegate with this updated intent
+    // in the updatedIntent property
+    this.emit(":delegate", updatedIntent);
+  } else if (this.event.request.dialogState !== "COMPLETED") {
+    console.log("in not completed");
+    // return a Dialog.Delegate directive with no updatedIntent property.
+    this.emit(":delegate");
+  } else {
+    console.log("in completed");
+    console.log("returning: "+ JSON.stringify(this.event.request.intent));
+    // Dialog is now complete and all required slots should be filled,
+    // so call your normal intent handler.
+    return this.event.request.intent;
+  }
 }
