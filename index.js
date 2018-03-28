@@ -24,19 +24,19 @@ var handlers = {
     this.emit('AMAZON.StopIntent');
   },
   'AMAZON.StopIntent': function () {
-    this.emit(':tell', 'ゴミ捨て当番を終了します。');
+    this.emit(':tell', 'ゴミ捨てルーレットを終了します。');
   },
   'AMAZON.HelpIntent': function () {
     var userNames = this.attributes['userNames'];
     console.log('HelpIntent Read:', userNames);
 
     // 初回振り分け
-    var message = 'ゴミ捨て当番にようこそ。';
+    var message = 'ゴミ捨てルーレットにようこそ。';
     if (!userNames) {
       message += 'まずは当番を登録します。ひとりずつ追加しますので、たとえば、太郎を追加して、と言ってください。';
     } else {
-      message += '今日のゴミ捨て当番を知りたい場合は、ゴミ捨て当番で当番を教えて、と聞いてください。' +
-                 '登録されている当番を知りたい場合は、ゴミ捨て当番で登録情報を教えて、と聞いてください。';
+      message += '今日のゴミ捨て当番を知りたい場合は、当番を教えて、と聞いてください。' +
+                 '登録されている当番を知りたい場合は、登録情報を教えて、と聞いてください。';
     }
     this.emit(':ask', message);
     console.log('HelpIntent Message:', message);
@@ -99,9 +99,9 @@ var handlers = {
       message += '、' + userNames[i] + 'さん';
     }
     message += 'です。'
-    message += '登録されている当番を追加したい場合は、たとえば、ゴミ捨て当番で太郎を登録して、と言ってください。';
-    message += '登録されている当番を削除したい場合は、たとえば、ゴミ捨て当番で太郎を削除して、と言ってください。';
-    this.emit(':tell', message);
+    message += '登録されている当番を追加したい場合は、たとえば、太郎を登録して、と言ってください。';
+    message += '登録されている当番を削除したい場合は、たとえば、太郎を削除して、と言ってください。';
+    this.emit(':ask', message);
     console.log('SettingIntent Message:', message);
   },
   'ChoiceIntent': function () {

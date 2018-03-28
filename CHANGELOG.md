@@ -1,5 +1,7 @@
 ## 追加したい機能
 
+* [ ] アカウントリンクで、地域(option)、ゴミの収集日を登録できるようにする。既存のデータがあれば勝手に連携できる？
+  * https://alexa.amazon.co.jp/spa/index.html#skills/dp/B07BHTKYDQ/?ref=skill_dsk_skb_ca_2&qid=1522061098
 * [ ] 地域の取得とゴミ捨ての収集日を伝える
 * [ ] 細かな使い勝手
   * [ ] スキルカードの表示をする？
